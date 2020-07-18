@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Form, Button, Loader } from "semantic-ui-react";
 import { useRouter } from "next/router";
 
-function newNote() {
+const newNote = () => {
   const [form, setForm] = useState({ title: "", description: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
@@ -100,6 +99,6 @@ function newNote() {
       </div>
     </div>
   );
-}
+};
 
 export default newNote;
