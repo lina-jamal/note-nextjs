@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Card, Button, CardContent, CardHeader } from "semantic-ui-react";
+import Notes from "../models/Note";
+import dbConnect from "../utils/dbConnect";
 
 export default function Index({ notes }) {
   return (
@@ -36,8 +38,16 @@ export default function Index({ notes }) {
   );
 }
 
+// export async function getStaticProps() {
+//   const res = await fetch("http://localhost:3000/api/notes");
+//   const { data } = await res.json();
+//   return { props: { notes: data } };
+// }
+
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/notes");
-  const { data } = await res.json();
-  return { props: { notes: data } };
+  dbConnect();
+  const notes = await Notes.find({});
+  return {
+    props: { notes: JSON.parse(JSON.stringify(notes)) },
+  };
 }
