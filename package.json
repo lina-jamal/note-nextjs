@@ -1,0 +1,22 @@
+{
+  "name": "note-nextjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd note-next && npm run dev",
+    "build": "cd note-next && npm run build",
+    "start": "cd note-next && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lina-jamal/note-nextjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lina-jamal/note-nextjs/issues"
+  },
+  "homepage": "https://github.com/lina-jamal/note-nextjs#readme"
+}
